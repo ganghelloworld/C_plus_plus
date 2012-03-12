@@ -14,7 +14,7 @@ int main(int argc, char * argv[])
 {
 	if(argc < 2)
 	{
-		cout << "Usage : ./" << argv[0] << " char(a~g)" << endl;
+		cout << "Usage : " << argv[0] << " char(a~g)" << endl;
 		return -1;
 	}
 
