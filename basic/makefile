@@ -1,11 +1,18 @@
 CPP = g++
-OFLAG = -o 
+CC = gcc
+O = -o 
+C = -c
+all : func_point test Ctest Nojump
 
-.SUFFIXES: .o .cpp
-.cpp.o :
-	$(CPP) $(OFLAG) $@ $<
+func_point : func_point.cpp
+	$(CPP) $(O) func_point $<
+test : test.cpp
+	$(CPP) $(O) test $<
 
-all: func_point.o
+Ctest : Ctest.c
+	$(CC) $(O) Ctest $<
 
+Nojump : Nojump.cpp
+	$(CPP) $(O) Nojump $<
 clean:
-	rm *.o
+	rm func_point test Ctest Nojump

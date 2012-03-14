@@ -6,13 +6,13 @@ void f(int i)
 	{
 		goto jump1;
 	}
-	int *a;
+	int a;
 jump1:
 	switch(i)
 	{
 		case 1:
 			a = 2;
-			printf("in case 1; a = %d\n", *a);
+			printf("in case 1; a = %d\n", a);
 			int b;
 			break;
 		case 2:
