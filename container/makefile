@@ -4,6 +4,8 @@ O = -o
 C = -c
 OBJ = test.o stash.o
 
+all : test stack_test
+
 test: $(OBJ)
 	$(CPP) $(O) test $(OBJ)
 
@@ -17,5 +19,5 @@ stash.o: stash.cpp stash.h
 	$(CPP) $(C) $<
 
 clean:
-	rm -rf test
+	rm -rf test stack_test
 	rm -rf *.o
