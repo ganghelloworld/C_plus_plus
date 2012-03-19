@@ -3,14 +3,16 @@
 
 using namespace std;
 const int sz = 20;
-class Holder
+struct Holder
 {
+private:
 	int a[sz];
 public:
 	Holder(){ memset(a, 0, sz * sizeof(int)); };
 	//class Pointer;
-	class Pointer
+	struct Pointer
 	{
+	private:
 		Holder *h;
 		int *p;
 	public:
