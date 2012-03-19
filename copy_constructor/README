@@ -1,0 +1,7 @@
+run it:
+	g++ HowMany.cpp
+	./a.out
+output of program if file: HomMany.out
+
+1.程序主要考察了当函数值传递(pass by value)时“复制构造函数"的重要性
+2.程序考察了当类间赋值时，“复制构造函数”的重要性
