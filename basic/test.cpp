@@ -26,6 +26,7 @@ int main()
 	Test t;
 	t.func(10);
 	t.func(12, 2);
+
 }
 int func(int a, int i)
 {
