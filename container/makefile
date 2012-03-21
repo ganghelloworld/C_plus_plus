@@ -1,23 +1,13 @@
 #
 CPP = g++
-O = -o
 C = -c
-OBJ = test.o stash.o
+O = -o
+all : stack_test
 
-all : test stack_test
-
-test: $(OBJ)
-	$(CPP) $(O) test $(OBJ)
-
-stack_test: stack_test.cpp stack.h
+stack_test : stack_test.o
 	$(CPP) $(O) stack_test stack_test.cpp
-
-test.o: test.cpp stash.h
-	$(CPP) $(C) $<
-
-stash.o: stash.cpp stash.h
-	$(CPP) $(C) $<
-
+stack_test.o : stack_test.cpp stack.h string_stack.h
+	$(CPP) $(C) stack_test.cpp
 clean:
-	rm -rf test stack_test
+	rm -rf stack_test
 	rm -rf *.o
