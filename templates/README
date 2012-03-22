@@ -1,0 +1,12 @@
+array.cpp
+	run it : g++ array.cpp
+			 ./a.out
+
+template_stack.cpp
+	run it : template_stack.cpp
+			 ./a.out
+
+测试了模板的基本用法
+
+===================================================
+
