@@ -1,0 +1,13 @@
+int_stack.cpp
+	run it: g++ int_stack.cpp
+			./a.out
+测试了最简单的iterator
+
+=============================================
+
+intstack_iterator.cpp
+	run it: g++ intstack_iterator.cpp
+			./a.out
+测试了把iterator嵌套进container中的情况
+
+============================================
