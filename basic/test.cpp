@@ -26,7 +26,12 @@ int main()
 	Test t;
 	t.func(10);
 	t.func(12, 2);
-
+	cout << "====================" << endl;
+	int test[10] = {0, 1, 2};
+	int (&ref_test)[10] = test;
+	cout << ref_test[4] << endl;
+	int* const& p_test = test;
+	cout << *(p_test + 3) << endl;
 }
 int func(int a, int i)
 {
