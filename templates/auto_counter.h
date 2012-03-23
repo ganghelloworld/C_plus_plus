@@ -9,14 +9,6 @@ class AutoCounter
 {
 	static int count;
 	int id;
-	AutoCounter() : id(count++)
-	{
-		verifier.add(this);
-		std::cout << "created[ " << id << " ]" << std::endl;
-	}
-	AutoCounter(const AutoCounter&);
-	void operator=(const AutoCounter&);
-public:
 	class CleanupCheck
 	{
 		std::set<AutoCounter*> traces;
@@ -42,6 +34,14 @@ public:
 		}
 	};
 	static CleanupCheck verifier;
+	AutoCounter() : id(count++)
+	{
+		verifier.add(this);
+		std::cout << "created[ " << id << " ]" << std::endl;
+	}
+	AutoCounter(const AutoCounter&);
+	void operator=(const AutoCounter&);
+public:
 	static AutoCounter* create()
 	{
 		return new AutoCounter();
@@ -64,4 +64,5 @@ public:
 };
 int AutoCounter::count = 0;
 AutoCounter::CleanupCheck AutoCounter::verifier;
+
 #endif //AUTO_COUNTER_H

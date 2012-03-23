@@ -1,4 +1,4 @@
-#include "template_pointer_stash.h"
+#include "pointer_stash.h"
 #include "auto_counter.h"
 #include <iostream>
 

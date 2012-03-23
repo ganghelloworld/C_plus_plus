@@ -58,9 +58,12 @@ T* PStash<T, inc>::operator[](int index)
 template<class T, int inc>
 T* PStash<T, inc>::remove(int index)
 {
-	T* temp = new T(*storage[index]);
-	delete storage[index];
-	storage[index] = 0;
+	T* temp = storage[index];
+	if(storage[index] != 0)
+	{
+		delete storage[index];
+		storage[index] = 0;
+	}
 	return temp;
 }
 template<class T, int inc>

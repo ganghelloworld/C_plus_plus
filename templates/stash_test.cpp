@@ -1,4 +1,4 @@
-#include "template_pointer_stash.h"
+#include "pointer_stash.h"
 #include <iostream>
 #include <fstream>
 #include <string>
