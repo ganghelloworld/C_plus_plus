@@ -18,3 +18,10 @@ stash_test.cpp stash_iterator.h
 测试了iterator处理stash的问题
 
 =============================================
+
+drawing.cpp shape.h
+	run it: g++ drawing.cpp
+			./a.out
+测试了多态与模板结合的使用
+
+=============================================
