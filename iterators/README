@@ -25,3 +25,6 @@ drawing.cpp shape.h
 测试了多态与模板结合的使用
 
 =============================================
+
+err_out
+	如果把iterator的copy-constructor参数中的const去掉，输出的链接错误信息，需要在看看copy-constructor的内容
