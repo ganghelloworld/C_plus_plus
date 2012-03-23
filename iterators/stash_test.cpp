@@ -4,7 +4,12 @@
 #include <string>
 
 using namespace std;
-
+/*
+struct Test{
+	PStash<string>::iterator itb;
+	PStash<string>::iterator ite;
+};
+*/
 int main()
 {
 	PStash<string>  ps;
@@ -14,12 +19,22 @@ int main()
 	{
 		ps.add(new string(line));
 	}
-
+	cout << "line num = " << ps.count() << endl;
 	PStash<string>::iterator itb = ps.begin();
-	string* s;
-	while(s = itb++)
+	PStash<string>::iterator ite = ps.end();
+	string* s = *ite;
+	/*
+	while(s)
 	{
 		cout << *s << endl;
+		s = ++itb;
+	}
+	*/
+	itb += 3;	
+	while(!(itb == ite))
+	{
+		cout << **itb << endl;
+		itb++;
 	}
 	return 0;
 }

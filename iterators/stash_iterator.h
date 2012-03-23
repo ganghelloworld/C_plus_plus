@@ -23,12 +23,21 @@ public:
 		PStash& ps;
 		int index;
 	public:
-		iterator(PStash& p, bool b = true) : ps(p)
+		//iterator() : ps(0), index(0){}
+		iterator(PStash& p) : ps(p), index(0){}
+		iterator(PStash& p, bool b) : ps(p)
 		{
 			if(b) index = 0;
 			else index = ps.count() - 1;
 		}
-		iterator(iterator& it) : ps(it.ps), index(it.index){}
+		//const is very important, otherwise we will get err in ./err_out
+		iterator(const iterator& it) : ps(it.ps), index(it.index){}
+		iterator& operator=(const iterator& it)
+		{
+			ps = it.ps;
+			index = it.index;
+			return *this;
+		}
 		T* operator++()
 		{
 			if(index >= 0 && index < ps.count() - 1)
@@ -39,7 +48,7 @@ public:
 		}
 		T* operator++(int)
 		{
-			if(index >= 0 && index < ps.count() - 1)
+			if(index >= 0 && index < ps.count())
 			{
 				return ps.storage[index++];
 			}
@@ -68,18 +77,19 @@ public:
 			index = it.index;
 			return *this;
 		}
+		// why can not const, because current must be const
 		T* operator*() const
 		{
 			return current();
 		}
-		T* operator->() const
+		T* operator->() const //how to use, It's very smart
 		{
 			return current();
 		}
-		T* current()
+		T* current() const
 		{
 			if(index >= 0 && index < ps.count())
-				return storage[index];
+				return ps.storage[index];
 			return NULL;
 		}
 	};
@@ -98,7 +108,7 @@ T* PStash<T, inc>::iterator::operator--()
 template<class T, int inc>
 T* PStash<T, inc>::iterator::operator--(int)
 {
-	if(index >= 1 && index < ps.count())
+	if(index >= 0 && index < ps.count())
 	{
 		return ps.storage[index--];
 	}

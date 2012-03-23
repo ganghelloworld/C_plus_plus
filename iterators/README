@@ -10,4 +10,11 @@ intstack_iterator.cpp
 			./a.out
 测试了把iterator嵌套进container中的情况
 
-============================================
+=============================================
+
+stash_test.cpp stash_iterator.h
+	run it: g++ stash_test.cpp
+			./a.out
+测试了iterator处理stash的问题
+
+=============================================
