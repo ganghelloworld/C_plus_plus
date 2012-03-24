@@ -5,6 +5,8 @@ using namespace std;
 class Test
 {
 public:
+	Test(){};
+	Test(Test& t){}
 	void func(int a, int i = 0);
 };
 
@@ -14,7 +16,11 @@ void Test::func(int a, int i)
 }
 
 int func(int a, int i = 0);
-
+Test create_test()
+{
+	Test t;
+	return t;
+}
 int main()
 {
 	char a[] = "Fenggang\n";
@@ -26,6 +32,9 @@ int main()
 	Test t;
 	t.func(10);
 	t.func(12, 2);
+	Test rvalue;
+	rvalue = create_test();
+	Test te(rvalue);
 	cout << "====================" << endl;
 	int test[10] = {0, 1, 2};
 	int (&ref_test)[10] = test;
