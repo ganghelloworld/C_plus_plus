@@ -8,6 +8,10 @@ public:
 	Test(){};
 	Test(Test& t){}
 	void func(int a, int i = 0);
+	~Test()
+	{
+		cout << "Test::~Test()" << endl;
+	}
 };
 
 void Test::func(int a, int i)
@@ -23,6 +27,8 @@ Test create_test()
 }
 int main()
 {
+	Test *t_arr = new Test[5];
+	delete []t_arr;
 	char a[] = "Fenggang\n";
 	FIELD(one);
 	one_string =  a;
