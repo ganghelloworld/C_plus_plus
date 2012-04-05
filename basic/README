@@ -35,3 +35,8 @@ two_dim_array.cpp
 测试了动态二维数组的new及delete
 
 ===============================
+
+测试了delete数组时，只能整个delete, 如delete []test, 如果
+a, delete &test[0] 会引起段错误 
+b, delete &test[i] i > 0 会引起异常, 打印如下信息摘录*** glibc detected *** ./a.out: free(): invalid pointer: 0x0999800e *** 
+==============================
