@@ -41,4 +41,4 @@ int main()
 int func(int a, int b)
 {
 	printf("Hello %d\t%d\n", a, b);
-}
+};
