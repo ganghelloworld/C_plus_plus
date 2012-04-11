@@ -1,4 +1,5 @@
 #include <iostream>
+#include "basic.h"
 using namespace std;
 
 class Test
@@ -35,4 +36,6 @@ int main()
 	Test b;
 	b.func();
 	test();
+	cout << "=====================" << endl;
+	cout << Basic::a << Basic::s << endl;
 }

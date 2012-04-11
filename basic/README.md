@@ -60,3 +60,8 @@ i > 0 会引起异常, 打印如下信息摘录*** glibc detected *** ./a.out: f
 函数定义时后面加不加";"都行的
 ----------------------------
 gcc,g++都可以通过
+
+static member
+----------------------------
+static 成员变量不能在.h文件里定义，只能在.cpp文件里定义,否则会引起链接错误
+static const int 和static const long可以在类的申明里面定义
