@@ -65,3 +65,7 @@ static member
 ----------------------------
 static 成员变量不能在.h文件里定义，只能在.cpp文件里定义,否则会引起链接错误
 static const int 和static const long可以在类的申明里面定义
+
+namespace resolve const
+---------------------------
+如果想用namespace的方法圈定一些常量，那么可以在.h里面申明，在.cpp里面用函数的形式初始化，如果直接想在.h里面定义，则需要加const修饰符

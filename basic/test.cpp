@@ -38,4 +38,6 @@ int main()
 	test();
 	cout << "=====================" << endl;
 	cout << Basic::a << Basic::s << endl;
+	//Tag::c = 2;
+	cout << Tag::a << " " << Tag::Y::i << " " << Tag::s << endl;
 }
