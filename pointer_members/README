@@ -1,5 +1,0 @@
-run it with:
-	g++ widget.cpp
-	./a.out > widget.out
-
-次程序主要考察了当指针指向类的成员变量或者类的成员方法时的用法
