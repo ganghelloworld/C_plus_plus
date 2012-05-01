@@ -1,0 +1,13 @@
+copying_with_pointers.cpp
+	run: g++ copying_with_pointers.cpp
+		 ./a.out
+演示了当对象中有指针时，对象的复制应该如何进行：对指针指向的内容也应该进行复制。
+需要注意的一点是：
+	DogHouse fidos2 = fidos; 调用的是DogHouse的复制构造函数,这和DogHouse fidos2(fidos);是等价的，所以程序员应该写成后一种，让语义更明确
+	fidos = fidos2; 这样才会调用赋值操作符 = 
+
+==================================
+reference_counting.cpp
+	run: g++ reference_counting.cpp
+		./a.out
+演示了引用计数的使用方法，当对象间进行复制时，如果对象中包含成员变量是指针，可以先不new 指针指向的内容，而是让此指针指向和原来相同的值，只有当值要改变时，才需要复制对象。此种技术叫做“写时复制",在操作系统fork进程时的内存页管理中应用比较著名

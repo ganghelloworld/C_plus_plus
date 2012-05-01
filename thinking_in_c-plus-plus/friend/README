@@ -1,0 +1,9 @@
+run it with:
+	g++ friend.cpp
+	./a.out
+or
+	g++ nestedFriend.cpp
+	./a.out
+
+关于friend nestedClass，详细的解释见
+	../operator_overloading/README

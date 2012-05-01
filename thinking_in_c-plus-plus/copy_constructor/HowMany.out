@@ -1,0 +1,16 @@
+HowMany(): name = h	object_count = 1
+after construction of h: name = h	object_count = 1
+in copy_constructor: name = h copy	object_count = 2
+after call f(): name = h copy	object_count = 2
+in copy_constructor: name = h copy	object_count = 3
+x argument inside f(): name = h copy	object_count = 3
+in copy_constructor: name = h copy copy	object_count = 4
+~HowMany(): name = h copy	object_count = 3
+in copy_constructor: name = h copy	object_count = 4
+x argument inside f(): name = h copy	object_count = 4
+in copy_constructor: name = h copy copy	object_count = 5
+~HowMany(): name = h copy copy	object_count = 4
+~HowMany(): name = h copy	object_count = 3
+~HowMany(): name = h copy copy	object_count = 2
+~HowMany(): name = h copy	object_count = 1
+~HowMany(): name = h	object_count = 0
