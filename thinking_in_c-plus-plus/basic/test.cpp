@@ -1,43 +1,13 @@
 #include <iostream>
-#include "basic.h"
+#include <string>
 using namespace std;
 
-class Test
-{
-	const int a;
-	int b;
-public:
-	Test() : a(10)
-	{
-	};
-	Test(int aa):a(aa)
-	{
-		b = 10;
-	};
-	void func();
-	~Test()
-	{
-		cout << "Test::~Test()" << endl;
-	};
-};
-void Test::func()
-{
-	cout << "a = " << a << endl;
-};
-
-void test()
-{
-	cout << "hello world" << endl;
-};
 int main()
 {
-	Test a;
-	a.func();
-	Test b;
-	b.func();
-	test();
-	cout << "=====================" << endl;
-	cout << Basic::a << Basic::s << endl;
-	//Tag::c = 2;
-	cout << Tag::a << " " << Tag::Y::i << " " << Tag::s << endl;
+	string con = "hello";
+	char ch = 'w';
+	int in = 65;
+	string tag = "" + in;
+	cout << "tag size = " << tag.size() <<  endl <<
+		"tag =|" << tag << "|" << endl;
 }

@@ -15,4 +15,5 @@ Ctest : Ctest.c
 Nojump : Nojump.cpp
 	$(CPP) $(O) Nojump $<
 clean:
+	rm -rf *.o
 	rm func_point test Ctest Nojump
